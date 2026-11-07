@@ -1,0 +1,17 @@
+:root {
+  color-scheme: dark;
+  --bg-primary: #080809;
+  --bg-secondary: #101012;
+  --bg-card: #151214;
+  --accent-purple: #c8102e;
+  --accent-blue: #e21b35;
+  --accent-red: #ff3048;
+  --accent-green: #d4d4d4;
+  --text-primary: #f4f1f1;
+  --text-secondary: #9b9294;
+  --border-color: #392126;
+  --radius: 5px;
+  --font: "Segoe UI Variable", "Segoe UI", system-ui, sans-serif;
+  --arasaka-red: #c8102e;
+  --arasaka-deep: #650817;
+}

@@ -1,0 +1,20 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; }
+body {
+  font-family: var(--font); color: var(--text-primary);
+  background: radial-gradient(900px 520px at 92% -18%, rgba(200,16,46,.20), transparent 64%),
+              radial-gradient(700px 440px at -15% 100%, rgba(101,8,23,.16), transparent 68%),
+              linear-gradient(135deg,#080809 0%,#0d0a0b 55%,#10090b 100%);
+  overflow: hidden;
+}
+.app { display: grid; grid-template-columns: 248px 1fr; height: 100vh; }
+.content { padding: 34px 42px; overflow-y: auto; background: linear-gradient(110deg,rgba(255,255,255,.008),transparent 40%); }
+.muted { color: var(--text-secondary); }
+h1 { font-size: 27px; font-weight: 650; letter-spacing: .045em; text-transform: uppercase; }
+.page-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; margin-bottom: 28px; }
+.page-header .muted { margin-top: 7px; font-size: 13px; }
+:focus-visible { outline: 2px solid var(--accent-red); outline-offset: 3px; }
+button, input, textarea, select { accent-color: var(--accent-red); }
+@media (max-width: 860px) { .app { grid-template-columns: 72px 1fr; } .nav-label,.brand-name,.nav-badge { display:none; } .content { padding:20px; } }
+@media (prefers-reduced-motion: reduce) { * { transition:none !important; animation:none !important; } }
+.settings-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.settings-panel{display:grid;align-content:start;gap:16px}.settings-panel h2{font-size:15px;text-transform:uppercase;letter-spacing:.07em}.settings-panel>.muted{font-size:12px;line-height:1.5}.settings-preview{min-height:120px;padding:20px;display:grid;align-content:center;gap:7px;background:linear-gradient(115deg,#210810,#090809 75%);border:1px solid #762033;position:relative;overflow:hidden}.settings-preview span{position:absolute;left:0;top:0;bottom:0;width:4px;background:#e21b35}.settings-preview b{letter-spacing:.14em}.settings-preview small{color:#c65b6e;letter-spacing:.15em}.settings-toggle{display:flex;align-items:center;gap:10px;color:var(--text-secondary);font-size:13px}.settings-toggle input{width:16px;height:16px}.settings-info{display:grid;gap:7px;border-top:1px solid var(--border-color);padding-top:15px;color:var(--text-secondary);font-size:12px}.settings-info b{color:#e35a70;letter-spacing:.1em}.compact-ui .content{padding:24px 30px}.compact-ui .mode-card{padding:17px}.reduce-motion-ui *{animation:none!important;transition:none!important}@media(max-width:900px){.settings-grid{grid-template-columns:1fr}}

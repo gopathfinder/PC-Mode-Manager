@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PC Mode Manager Profile",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "id",
+    "name",
+    "actions"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_-]{1,64}$"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 80
+    },
+    "description": {
+      "type": "string"
+    },
+    "enabled": {
+      "type": "boolean"
+    },
+    "color": {
+      "type": "string",
+      "pattern": "^#[0-9A-Fa-f]{6}$"
+    },
+    "icon": {
+      "type": "string"
+    },
+    "actions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "type"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "type": {
+            "enum": [
+              "launch_application",
+              "close_application",
+              "set_power_plan",
+              "open_folder",
+              "open_website",
+              "set_notification_preference",
+              "delay",
+              "restore_previous_state"
+            ]
+          },
+          "enabled": {
+            "type": "boolean"
+          },
+          "parameters": {
+            "type": "object"
+          },
+          "timeout_ms": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 300000
+          },
+          "on_error": {
+            "enum": [
+              "continue",
+              "abort"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

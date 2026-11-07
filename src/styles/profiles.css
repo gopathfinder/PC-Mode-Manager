@@ -1,0 +1,41 @@
+/* Profiles Manager */
+.profiles-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px}
+.profile-card{--profile-color:var(--accent-red);background:var(--bg-card);border:1px solid var(--border-color);border-radius:var(--radius);padding:20px;display:flex;flex-direction:column;gap:12px;min-height:240px}
+.profile-card:hover{border-color:color-mix(in srgb,var(--profile-color) 65%,var(--border-color))}
+.profile-card-head{display:flex;align-items:center;justify-content:space-between}
+.profile-icon{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;font-size:21px;background:color-mix(in srgb,var(--profile-color) 18%,transparent);border:1px solid color-mix(in srgb,var(--profile-color) 55%,transparent)}
+.profile-state{font-size:11px;color:var(--text-secondary);padding:5px 9px;border:1px solid var(--border-color);border-radius:99px}
+.profile-state.enabled{color:var(--accent-red);border-color:color-mix(in srgb,var(--accent-red) 45%,transparent)}
+.profile-card h2{font-size:18px}.profile-card p{font-size:13px;line-height:1.5;color:var(--text-secondary);min-height:38px}
+.profile-meta{display:flex;gap:14px;color:var(--text-secondary);font-size:11px;margin-top:auto}
+.profile-actions{display:flex;gap:8px;margin-top:4px}
+.primary-btn{border:1px solid var(--accent-red);background:var(--accent-red);color:white;border-radius:10px;padding:10px 15px;font:inherit;font-weight:650;cursor:pointer}
+.primary-btn:hover{filter:brightness(1.1)}.primary-btn:disabled{opacity:.5;cursor:wait}
+.profile-editor{margin-top:22px;padding:22px;background:var(--bg-card);border:1px solid var(--border-color);border-radius:var(--radius);scroll-margin-top:20px}
+.editor-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;margin-bottom:18px}
+.editor-heading h2{font-size:19px}.editor-heading h3{font-size:16px}
+.editor-heading .muted{font-size:12px;margin-top:4px}
+.profile-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.profile-fields label,.launch-add label{display:grid;gap:7px;color:var(--text-secondary);font-size:12px}
+.profile-fields input:not([type=checkbox]),.profile-fields textarea,.profile-fields select,.launch-add input{width:100%;background:#090809;border:1px solid var(--border-color);border-radius:9px;padding:10px 11px;color:var(--text-primary);font:inherit;font-size:13px}
+.profile-fields input[type=color]{height:39px;padding:4px}
+.profile-fields textarea{resize:vertical}
+.field-wide{grid-column:1/-1}
+.toggle-field{display:flex!important;align-items:center;gap:9px}
+.toggle-field input{accent-color:var(--accent-red)}
+.actions-editor{border-top:1px solid var(--border-color);margin-top:22px;padding-top:20px}
+.launch-list{display:grid;gap:8px;margin:12px 0}
+.launch-row{display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.025);border:1px solid var(--border-color);border-radius:9px;padding:9px 10px}
+.launch-row-icon{color:var(--accent-red)}.launch-row-text{font-size:12px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1}
+.empty-actions{font-size:12px;padding:8px 0}
+.launch-add{display:grid;grid-template-columns:1.4fr 1fr auto;gap:10px;align-items:end}
+.editor-footer{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:20px;padding-top:16px;border-top:1px solid var(--border-color)}
+.editor-footer .muted,.profile-footnote{font-size:11px;color:var(--text-secondary);line-height:1.5}
+.profile-footnote{margin-top:16px}
+@media(max-width:850px){.profile-fields{grid-template-columns:1fr}.field-wide{grid-column:auto}.launch-add{grid-template-columns:1fr}.editor-footer{align-items:flex-start;flex-direction:column}}
+
+/* Расширенный запуск: файл, аргументы, рабочая папка, пауза */
+.launch-add{grid-template-columns:1.4fr 1fr 1fr}
+.launch-add .toggle-field{align-self:center}
+.launch-delay{grid-template-columns:1fr auto;margin-top:12px;padding-top:12px;border-top:1px dashed var(--border-color)}
+@media(max-width:850px){.launch-add,.launch-delay{grid-template-columns:1fr}}
