@@ -26,16 +26,6 @@ Instead of configuring your desktop every time, choose a profile and let the app
 - **Windows startup** — optionally launch PC Mode Manager when you sign in.
 - **Windows installers** — build NSIS `.exe` and MSI packages locally or through GitHub Actions.
 
-## Screenshots
-
-_Add screenshots or a short demo GIF here._
-
-Suggested screenshots:
-- `docs/screenshots/mode-dashboard.png`
-- `docs/screenshots/profiles-editor.png`
-- `docs/screenshots/process-manager.png`
-- `docs/screenshots/system-monitor.png`
-
 ## Download
 
 Prebuilt installers are published in the repository's **GitHub Releases** section when a release is created.
